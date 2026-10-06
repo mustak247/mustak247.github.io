@@ -64,8 +64,8 @@ h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;back
 .stats div:first-child{border-left:0}
 .stats b{display:block;font:700 26px/1.1 var(--d);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stats span{font-size:13px;color:#B9B3D6;line-height:1.3;display:block;margin-top:2px}
-.mq{max-width:1200px;margin:0 auto;overflow:hidden;padding:44px 0 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.mt{display:flex;gap:75px;width:max-content;padding-right:75px;color:var(--fg);animation:mqs 38s linear infinite}
+.mq{max-width:1200px;margin:24px auto 44px;overflow:hidden;padding:44px 0 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mt{display:flex;gap:90px;width:max-content;padding-right:90px;color:var(--fg);animation:mqs 38s linear infinite}
 .mq:hover .mt{animation-play-state:paused}
 .lg{display:block;flex:none;fill:currentColor}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mt{color:#fff}}
@@ -135,7 +135,8 @@ h1{font-size:30px;line-height:38px}
 .lead{font-size:17px;line-height:25.7px}
 }
 @media (max-width:560px){
-.mt{gap:42px;padding-right:42px}
+.mt{gap:45px;padding-right:45px}
+.mq{margin:16px auto 32px}
 .w{padding:0 18px}
 .g4,.g3{grid-template-columns:1fr}
 .btn{flex:1 1 100%;justify-content:center}
