@@ -19,9 +19,16 @@ html{scroll-behavior:smooth;scroll-padding-top:120px}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.65 var(--b)}
 a{color:inherit;text-decoration:none}
 svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.w{max-width:1120px;margin:0 auto;padding:0 24px}
+.w{max-width:1150px;margin:0 auto;padding:0 24px}
 :focus-visible{outline:3px solid #C084FC;outline-offset:3px;border-radius:6px}
 .dk{background:#07070C;color:#F4F2FF}
+body::before,body::after{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;will-change:transform}
+body::before{background:radial-gradient(40% 35% at 18% 22%,rgba(124,58,237,.20),transparent 70%),radial-gradient(35% 30% at 78% 18%,rgba(168,85,247,.16),transparent 70%),radial-gradient(45% 35% at 60% 85%,rgba(109,40,217,.18),transparent 70%);animation:cloudA 34s ease-in-out infinite alternate}
+body::after{background:radial-gradient(38% 32% at 85% 60%,rgba(232,121,249,.10),transparent 70%),radial-gradient(42% 34% at 12% 78%,rgba(124,58,237,.16),transparent 70%),radial-gradient(30% 26% at 45% 40%,rgba(168,85,247,.10),transparent 70%);animation:cloudB 46s ease-in-out infinite alternate}
+@keyframes cloudA{from{transform:translate3d(-4%,-3%,0) scale(1)}to{transform:translate3d(5%,4%,0) scale(1.18)}}
+@keyframes cloudB{from{transform:translate3d(5%,3%,0) scale(1.15)}to{transform:translate3d(-5%,-4%,0) scale(1)}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero,:root:not([data-theme="light"]) .work,:root:not([data-theme="light"]) .soft,:root:not([data-theme="light"]) footer{background:transparent}}
+:root[data-theme="dark"] .hero,:root[data-theme="dark"] .work,:root[data-theme="dark"] .soft,:root[data-theme="dark"] footer{background:transparent}
 header{position:sticky;top:0;z-index:20;background:rgba(7,7,12,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);color:#F4F2FF;padding-top:env(safe-area-inset-top,0px)}
 .hw{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding-top:12px;padding-bottom:12px}
 .brand{display:flex;align-items:center;gap:11px;font:600 18px var(--d);letter-spacing:-.01em}
@@ -57,7 +64,7 @@ h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;back
 .stats div:first-child{border-left:0}
 .stats b{display:block;font:700 26px/1.1 var(--d);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stats span{font-size:13px;color:#B9B3D6;line-height:1.3;display:block;margin-top:2px}
-section{padding:88px 0}
+section{padding:72px 0}
 h2{font:700 clamp(28px,3.8vw,40px)/1.15 var(--d);letter-spacing:-.02em;margin:0 0 10px}
 .sub{color:var(--mute);max-width:58ch;margin:0 0 40px}
 .dk .sub,.work .sub{color:#B9B3D6}
@@ -68,7 +75,7 @@ h2{font:700 clamp(28px,3.8vw,40px)/1.15 var(--d);letter-spacing:-.02em;margin:0 
 .card h3{font:600 18px/1.3 var(--d);margin:0 0 8px}
 .card p{margin:0;color:var(--mute);font-size:15px}
 .work{background:radial-gradient(800px 400px at 100% 0%,rgba(168,85,247,.22),transparent 60%),#07070C;color:#F4F2FF}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g3{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .pj{display:block;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.04);overflow:hidden;transition:border-color .2s,transform .2s}
 .pj:hover{border-color:#C084FC;transform:translateY(-4px)}
 .th{position:relative;height:150px;overflow:hidden;background:#111}
@@ -108,7 +115,7 @@ footer{padding:28px 0 32px;font-size:14px;color:#A9A5BD;border-top:1px solid rgb
 .hg{grid-template-columns:1fr;gap:44px;padding-top:44px;padding-bottom:56px}
 .me{margin:0 auto;max-width:340px}.c1{left:-8px}.c2{right:-6px}
 .g2{grid-template-columns:1fr}
-section{padding:60px 0}
+section{padding:50px 0}
 }
 @media (max-width:720px){
 .hw{grid-template-columns:1fr auto;gap:5px;padding-top:5px;padding-bottom:8px;align-items:center}
@@ -131,7 +138,7 @@ h1{font-size:30px;line-height:38px}
 .ed em{width:100%;text-align:left;padding-left:58px}
 }
 @media (max-width:350px){nav{font-size:11px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}body::before,body::after{animation:none}}
 </style>
 </head>
 <body id="top">
@@ -178,10 +185,10 @@ h1{font-size:30px;line-height:38px}
 <h2>What I do</h2>
 <p class="sub">Custom code where a plugin falls short, and the right plugin or theme where it doesn't.</p>
 <div class="g4">
-<div class="card"><div class="ic"><svg class="i"><use href="#plug"/></svg></div><h3>Custom plugins</h3><p>Admin tools, forms, automation and CRM-style dashboards built with PHP and JavaScript.</p></div>
+<div class="card"><div class="ic"><svg class="i"><use href="#lay"/></svg></div><h3>Full WordPress solution</h3><p>End-to-end WordPress builds, from design and custom development to launch and support.</p></div>
 <div class="card"><div class="ic"><svg class="i"><use href="#cart"/></svg></div><h3>WooCommerce stores</h3><p>Custom checkout, shipping and side-cart flows, including Bangladesh-market checkout UX.</p></div>
-<div class="card"><div class="ic"><svg class="i"><use href="#lay"/></svg></div><h3>Themes and builders</h3><p>Elementor, Gutenberg, Divi, Bricks and premium themes customized to the brief.</p></div>
-<div class="card"><div class="ic"><svg class="i"><use href="#zap"/></svg></div><h3>Speed and fixes</h3><p>Caching, image optimization and root-cause debugging instead of temporary patches.</p></div>
+<div class="card"><div class="ic"><svg class="i"><use href="#plug"/></svg></div><h3>Custom plugins</h3><p>Admin tools, forms, automation and CRM-style dashboards built with PHP and JavaScript.</p></div>
+<div class="card"><div class="ic"><svg class="i"><use href="#zap"/></svg></div><h3>Speed and security</h3><p>Caching, image optimization, malware cleanup and security hardening, with root-cause fixes.</p></div>
 </div></div></section>
 
 <section id="work" class="work"><div class="w">
@@ -189,6 +196,7 @@ h1{font-size:30px;line-height:38px}
 <p class="sub">Live websites I built or customized. Select a project to open the site.</p>
 <div class="g3" id="pj"></div>
 <p class="more">More live samples and client references are available on request.</p>
+<a class="btn p" style="margin-top:16px" href="https://wa.me/8801516073024"><svg class="i"><use href="#wa"/></svg>Chat on WhatsApp</a>
 </div></section>
 
 <section id="skills"><div class="w">
@@ -216,7 +224,7 @@ h1{font-size:30px;line-height:38px}
 <div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Higher Secondary (HSC)</strong><small>Kushtia Government College</small></div><em>2018<br>Result 4.58</em></div>
 </div></div></div></section>
 
-<section id="contact" style="padding-top:72px"><div class="w"><div class="cta">
+<section id="contact" style="padding-top:56px"><div class="w"><div class="cta">
 <h2>Looking for a WordPress developer?</h2>
 <p>I'm open to full-time remote roles. Send a short note about your project and I will reply.</p>
 <div class="row"><a class="btn p" href="mailto:ahmedmustak9281@gmail.com"><svg class="i"><use href="#mail"/></svg>ahmedmustak9281@gmail.com</a><a class="btn o" href="https://wa.me/8801516073024"><svg class="i"><use href="#wa"/></svg>+880 1516 073024</a><a class="btn o" href="https://www.linkedin.com/in/mr-ahamed"><svg class="i"><use href="#in"/></svg>LinkedIn</a></div>
