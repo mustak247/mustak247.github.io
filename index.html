@@ -107,11 +107,12 @@ h2{font:700 clamp(28px,3.8vw,40px)/1.15 var(--d);letter-spacing:-.02em;margin:0 
 .ck{list-style:none;margin:0;padding:0}
 .ck li{display:flex;gap:12px;margin-bottom:11px;font-size:15.5px}
 .ck svg{color:#A855F7;margin-top:3px;width:18px;height:18px}
+.sk .note{margin-top:20px}
 .ed{display:flex;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
 .ed:first-of-type{border-top:0;padding-top:4px}
 .ed .ic{width:42px;height:42px;margin:0}
 .ed div:nth-child(2){flex:1}.ed strong{display:block;font:600 16px/1.3 var(--d)}
-.ed small{color:var(--mute);font-size:14px}
+.ed small{display:block;color:var(--mute);font-size:14px}
 .ed em{font-style:normal;text-align:right;font-size:14px;color:var(--mute);white-space:nowrap}
 .cta{border-radius:26px;padding:56px 40px;text-align:center;background:radial-gradient(600px 300px at 80% 0%,rgba(232,121,249,.45),transparent 60%),linear-gradient(135deg,#1B0B3D,#5B21B6 60%,#7C3AED);color:#fff}
 .cta h2{margin-bottom:10px}
@@ -230,7 +231,7 @@ header nav a:hover::after{transform:scaleX(1);transform-origin:left}
 .btn.p::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);translate:-120% 0;transition:translate .8s var(--e);pointer-events:none}
 .btn.p:hover::after{translate:120% 0}
 .ft li a{transition:color .15s,translate .4s var(--e)}.ft li a:hover{translate:5px 0}
-@media (max-width:720px){#services .g4>.card{grid-template-columns:40px 1fr;gap:6px 14px;padding:22px 4px}#services .g4>.card .ic,#services .g4>.card::after{display:none}#services .g4>.card p{grid-column:2}#services .g4>.card:hover{padding-left:12px}}
+@media (max-width:720px){#services .g4>.card{grid-template-columns:auto 1fr;gap:6px 14px;padding:22px 4px}#services .g4>.card::after{display:none}#services .g4>.card::before{display:none}#services .g4>.card .ic{grid-column:1;grid-row:1/span 2;align-self:start}#services .g4>.card h3{grid-column:2;grid-row:1}#services .g4>.card p{grid-column:2;grid-row:2}#services .g4>.card:hover{padding-left:12px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}body::before,body::after,.mt{animation:none}}
 </style>
 </head>
@@ -323,9 +324,9 @@ header nav a:hover::after{transform:scaleX(1);transform-origin:left}
 <li><svg class="i"><use href="#ok"/></svg>Improved speed through caching, image and responsive optimization.</li>
 </ul></div>
 <div class="card"><h3 style="font:700 24px var(--d);margin:0 0 14px">Education</h3>
-<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Master's degree</strong><small>Kushtia Government College</small></div><em>2026<br>Result 3.00</em></div>
-<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Honours (Bachelor's)</strong><small>Kushtia Government College</small></div><em>2024<br>Result 3.06</em></div>
-<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Higher Secondary (HSC)</strong><small>Kushtia Government College</small></div><em>2018<br>Result 4.58</em></div>
+<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Master's degree</strong><small>Kushtia Government College</small><small>Passing Year: 2026 (Exam 2023)</small></div></div>
+<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Honours (Bachelor's)</strong><small>Kushtia Government College</small><small>Passing Year: 2025 (Exam 2022)</small></div></div>
+<div class="ed"><div class="ic"><svg class="i"><use href="#cap"/></svg></div><div><strong>Higher Secondary (HSC)</strong><small>Kushtia Government College</small><small>Passing Year: 2018</small></div></div>
 </div>
 <div class="card job ag"><div class="ic"><svg class="i"><use href="#job"/></svg></div><h3>6 Month Remote Job Based on France</h3><p class="meta">I worked remotely with a digital marketing agency for 6 months. My main focus was designing business websites and blog websites. I turned each client's goals into a clear, good-looking layout that was easy for visitors to read and use.</p></div>
 </div></div></section>
